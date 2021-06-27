@@ -1,0 +1,8 @@
+/*Styles image on home page making it responsive*/
+
+.imgcenter
+{
+height:auto;
+width:100%;
+position: relative;
+}

@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*Styles delivery terms page*/
+
+* { box-sizing: border-box; }
+
+body { 
+  /*font-family: 'Open Sans', sans-serif;*/
+  color: #000000;
+}
+
+h1
+{
+	color:#008000;
+}
+
+
+/*p{
+
+	font-size: 14px;
+}
+*/
+/* STRUCTURE */
+
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+}
+header {
+	padding: 0 15px;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.column {
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+	
+}
+
+footer {
+	padding: 0 15px;
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
+
+/*Styles main heading on delivery page and puts square bullets on list*/
+
+h1{
+
+	text-align:center;
+
+}
+
+ul
+{
+
+ list-style: square inside;
+ font-size:14px;
+
+
+}
+
+.Delivery, .Delivery2 {
+
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ line-height: 1.5;
+ text-align: justify;
+ text-justify: inter-word;
+ font-weight:bold;
+}
+
+h5
+{
+
+	font-size: 14px;
+}
+
+.Delivery3 {
+
+	font-size: 25px;
+}

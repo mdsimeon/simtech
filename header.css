@@ -1,0 +1,136 @@
+/*Styles header section */
+
+header {
+  overflow: hidden;
+  background: #222;
+}
+
+header a, header label {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+header a:hover, header label:hover { color: #aaa; }
+
+header label {
+  float: right;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+header label:after {
+  content: "\2261";
+  font-size: 1.8em;
+}
+
+/*Logo is styled with green color font family of fugaz font size and text shadow*/
+.logo {
+  color: #008000;
+  font-family: 'Fugaz One', cursive;
+  float: left;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 2px rgba(black,0.6);
+}
+  
+/*This code is responsible for the glow of the logo it starts here*/
+
+.logo {
+  
+    animation: logo 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes logo {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+/*This code is responsible for the glow of the logo it ends here*/
+
+
+/*
+Transforms logo to uppercase on mouse over*/
+  .logo:hover{
+    text-transform: uppercase;
+    color: #008000;
+  }
+  /*End of Transforms logo to uppercase on mouse over*/
+
+/*Causes menu to float right and adapt on several browers*/
+
+nav {
+  float: right;
+  max-height: 0;
+  width: 100%;
+  -webkit-transition: max-height 0.3s; 
+     -moz-transition: max-height 0.3s;
+       -o-transition: max-height 0.3s;
+          transition: max-height 0.3s;
+          font-family: 'Fugaz One', cursive;
+       
+}
+/* End of Causes menu to float right and adapt on several browers*/
+
+/*Responsible for setting the margins of the hamburger menu  padding aligns center and color of link on hover*/
+nav ul {
+  margin: 0;
+  padding: 0;
+   padding-bottom: 10px;
+}
+  
+nav li {
+  display: block;
+  text-align: center;
+}
+  
+nav a:hover {
+  padding: 10px;
+  width: 100%;
+  color:#FF033E;
+}
+
+
+
+#nav { display: none; }
+
+#nav:checked ~ nav {
+  max-height: 400px; /* This can be anything bigger than your nav height. The transition duration works with this */
+}
+
+@media only screen and (min-width: 700px) {
+  
+  header label { display: none; }
+  
+  nav {
+    width: auto;
+    max-height: none;
+  }
+  
+  nav ul {
+    padding: 0;
+    padding-right: 10px;
+  }
+  
+  nav li {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  header nav a {
+    display: inline-block;
+    padding: 20px 10px;
+    width: auto;
+  }
+  
+}
+
+/*Responsible for setting the margins of the hamburger menu  padding aligns center and color of link on hover*/
